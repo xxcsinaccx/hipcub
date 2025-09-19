@@ -7,7 +7,7 @@ commands = [
     "make install",
     "./benchmark/benchmark_device_merge_sort"
 ]
-workdir = "/workspace/hipcub/projects/hipcub/build"
+workdir = "/xxcsinaccx__hipcub.git/project/hipcub/build"
 for cmd in commands:
     print(f"running: {cmd}")
     result = subprocess.run(cmd, shell=True, cwd=workdir)
