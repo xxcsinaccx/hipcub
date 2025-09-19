@@ -2,12 +2,12 @@ import subprocess
 
 # 依次要执行的命令（写在列表里）
 commands = [
-    "CXX=hipcc cmake -DBUILD_BENCHMARK=ON -DAMDGPU_TARGETS=gfx942 ../.",
+    "CXX=hipcc cmake -DBUILD_BENCHMARK=ON ../.",
     "make -j4",
     "make install",
     "./benchmark/benchmark_device_merge_sort"
 ]
-workdir = "/xxcsinaccx__hipcub.git/project/hipcub/build"
+workdir = "/xxcsinaccx__hipcub.git/projects/hipcub/build"
 for cmd in commands:
     print(f"running: {cmd}")
     result = subprocess.run(cmd, shell=True, cwd=workdir)
